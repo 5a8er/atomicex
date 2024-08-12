@@ -1,0 +1,162 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.site-title {
+  font-size: 2em;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.exchange-form {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-column {
+  width: 48%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #f7931a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e67e0d;
+}
+
+.swap-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #f7931a;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.swap-icon:hover {
+  transform: rotate(180deg);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #3a3a3a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background-color: #f7931a;
+}
+
+#content-area {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.welcome-message {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.welcome-message h2 {
+  color: #f7931a;
+  margin-top: 0;
+}
+
+.features-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.features-list li::before {
+  content: "• ";
+  color: #f7931a;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+

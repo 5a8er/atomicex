@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtomicSwap - BTC/XMR Exchange</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path fill="#f7931a" d="M31.85 15.92a15.92 15.92 0 1 1-31.84 0 15.92 15.92 0 0 1 31.84 0z"/>
+                    <path fill="#fff" d="M23.19 14.02c.32-2.16-1.32-3.32-3.57-4.1l.73-2.93-1.78-.44-.71 2.85c-.47-.12-.95-.23-1.42-.34l.72-2.87-1.78-.44-.73 2.93c-.39-.09-.77-.18-1.14-.27l-2.45-.61-.47 1.9s1.32.3 1.29.32c.72.18.85.65.83 1.03l-.83 3.33c.05.01.11.03.18.06l-.18-.05-1.16 4.67c-.09.22-.31.55-.81.42.02.03-1.29-.32-1.29-.32l-.88 2.03 2.31.58c.43.11.85.22 1.27.33l-.74 2.96 1.78.44.73-2.93c.49.13.96.25 1.42.37l-.73 2.91 1.78.44.74-2.95c3.05.58 5.35.34 6.31-2.41.77-2.22-.04-3.5-1.63-4.33 1.16-.27 2.03-1.03 2.27-2.61zm-4.06 5.69c-.55 2.2-4.26 1.01-5.46.71l.97-3.9c1.2.3 5.06.89 4.49 3.19zm.55-5.71c-.5 2-3.57.99-4.57.74l.88-3.54c1 .25 4.22.72 3.69 2.8z"/>
+                </svg>
+                <img class="logo" src="https://cryptologos.cc/logos/monero-xmr-logo.svg?v=032" alt="Monero (XMR) logo" width="30" height="30">
+                <h1 class="site-title">AtomicSwap</h1>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-button" data-view="dashboard">Dashboard</button>
+                <button class="nav-button" data-view="wallet">Wallet</button>
+                <button class="nav-button" data-view="history">Transaction History</button>
+                <button class="nav-button active" data-view="home">Home</button>
+            </div>
+        </header>
+
+        <div id="content-area">
+            <!-- Welcome Message -->
+            <div class="welcome-message">
+                <h2>Welcome to AtomicSwap</h2>
+                <p>AtomicSwap is a secure and decentralized platform for exchanging Bitcoin (BTC) and Monero (XMR) without intermediaries. Our atomic swap technology ensures that your trades are safe, private, and efficient.</p>
+                <h3>Features:</h3>
+                <ul class="features-list">
+                    <li>Trustless exchanges between BTC and XMR</li>
+                    <li>No registration required</li>
+                    <li>Low fees</li>
+                    <li>Enhanced privacy</li>
+                </ul>
+                <p>Get started by using the Swap interface below or check your Dashboard for an overview of your account.</p>
+            </div>
+
+            <!-- Swap interface -->
+            <div id="swap-interface" class="exchange-form">
+                <form id="swap-form">
+                    <div class="form-row">
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label for="from-currency">From:</label>
+                                <select id="from-currency">
+                                    <option value="btc">Bitcoin (BTC)</option>
+                                    <option value="xmr">Monero (XMR)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="from-amount">Amount:</label>
+                                <input type="number" id="from-amount" step="0.00000001" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label for="to-currency">To:</label>
+                                <select id="to-currency">
+                                    <option value="xmr">Monero (XMR)</option>
+                                    <option value="btc">Bitcoin (BTC)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="to-amount">Estimated to receive:</label>
+                                <input type="number" id="to-amount" readonly>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swap-icon">⇄</div>
+                    <div class="center-button">
+                        <button type="submit">Initiate Swap</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" style="display:none;">Loading...</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/9.0.2/bignumber.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+
